@@ -1,76 +1,16 @@
-# OS
+# LaTeX-focused .gitignore for Final_Year_Report
+
+# OS / Editor junk
 .DS_Store
 Thumbs.db
-
-# VS Code
 .vscode/
 .history/
 *.code-workspace
-
-# General
-*.log
-logs/
-tmp/
-temp/
-.cache/
+*~
 *.swp
 *.swo
-*.orig
 
-# Environment files (keep sensitive vars out of git)
-.env
-.env.*
-*.env
-
-# Git
-.gitignore~
-
-# Python
-__pycache__/
-*.py[cod]
-*.pyd
-*.pyo
-*.so
-.eggs/
-*.egg-info/
-dist/
-build/
-.venv/
-venv/
-env/
-pip-wheel-metadata/
-.pytest_cache/
-.mypy_cache/
-.pytype/
-.tox/
-.nox/
-.coverage
-.coverage.*
-htmlcov/
-.ruff_cache/
-ruff_cache/
-
-# Node / JS
-node_modules/
-.eslintcache
-.parcel-cache/
-.turbo/
-.nyc_output/
-coverage/
-.vite/
-.next/
-.nuxt/
-.svelte-kit/
-.vercel/
-out/
-dist/
-
-# Java / Gradle (if any)
-target/
-.gradle/
-build/
-
-# LaTeX (common auxiliary files)
+# LaTeX auxiliary and build files
 *.aux
 *.bbl
 *.bcf
@@ -93,9 +33,27 @@ build/
 *.vrb
 *.xdv
 *.run.xml
+*.dvi
+*.ps
+
+# Glossaries, nomenclature, acronyms
+*.acn
+*.acr
+*.alg
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.ist
+
+# minted / pygments outputs
 _minted-*/
 minted-output/
+
+# latexmk/texlive intermediate log
 texput.log
 
-# Jupyter
-.ipynb_checkpoints/
+# IMPORTANT: Do NOT ignore PDFs globally to keep image assets (e.g., in Images/)
+# If you want to ignore the compiled PDF(s), uncomment one of the lines below:
+# main.pdf
+# *.pdf
