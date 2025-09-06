@@ -2,6 +2,7 @@
 \section*{\Large\centering {CHAPTER 4 \\ SYSTEM DESIGN}}
 \addcontentsline{toc}{section}{CHAPTER 4: System Design}\label{4}
 \subsection{Design}
+System design takes the findings from analysis and converts them into a practical plan for development. It describes the system’s architecture, components, data flow, and deployment environment. The design ensures that each part of the system frontend, backend, database, and machine learning model works together smoothly. Diagrams like class, sequence, and deployment diagrams help visualize the structure and workflow, making implementation easier and more reliable.
 \begin{enumerate}[label=\roman*.]
     \item \textbf{Class Diagram}
           \begin{center}
@@ -13,7 +14,6 @@
               \end{figure}
           \end{center}
           The refined class diagram significantly expands upon the high-level version by introducing detailed implementation specifics and architectural components. While the original diagram focused on core domain entities, this version incorporates the complete MVC architecture with dedicated controller classes for different functional areas. The AuthController, UploadController, AnalysisController, and ResultController represent the application's API endpoints and business logic handlers. New middleware components like AuthMiddleware and FileUploadMiddleware demonstrate the request processing pipeline and security layers. The MLModelService class provides more granular methods for model loading, image preprocessing, tensor operations, and classification logic. Database models now include private fields with proper encapsulation and detailed method signatures showing parameter types and return values. This refined diagram reveals the actual software architecture with separation of concerns, dependency injection patterns, and proper abstraction layers that weren't visible in the high-level overview.
-          \newpage
     \item \textbf{Object Diagram}
           \begin{center}
               \begin{figure}[H]
