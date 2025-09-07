@@ -18,6 +18,15 @@
 \usepackage{caption}  % for table caption
 \usepackage{booktabs} % for better table lines
 \usepackage{enumitem}
+\usepackage{multirow}  % For multirow table cells
+\usepackage{xcolor}    % For colored cells (if not already loaded)
+
+% Define Gantt chart symbols
+\newcommand{\GantP}{\cellcolor{blue!30}P}      % Planning
+\newcommand{\GantD}{\cellcolor{green!30}D}     % Development
+\newcommand{\GantT}{\cellcolor{orange!30}T}    % Testing
+\newcommand{\GantY}{\cellcolor{red!30}Y}       % Deployment
+\newcommand{\GantC}{\cellcolor{gray!20}C}      % Continuous/Documentation
 
 \usepackage[acronym]{glossaries}  % Load glossaries package
 \makeglossaries  % Prepares glossaries for use
@@ -118,7 +127,6 @@
 {
 \newpage
 \section*{\Large\centering \textbf{REFERENCES}}
-\newpage
 \addcontentsline{toc}{section}{REFERENCES}
 \renewcommand{\refname}{}
 \bibliographystyle{IEEEtran}

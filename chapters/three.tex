@@ -19,7 +19,7 @@ System analysis is about understanding the problem clearly before building the s
 
     \item \textbf{Non-Functional Requirements}
           \begin{itemize}
-              \item \textbf{Performance:} The system should process MRI images and provide classification results within 10-15 seconds per image, ensuring minimal waiting time for medical practitioners during diagnosis.
+              \item \textbf{Performance:} The system should process MRI images and provide classification results within 10--15 seconds per image, ensuring minimal waiting time for medical practitioners during diagnosis.
 
               \item \textbf{Accuracy:} The brain tumor classification model must maintain a minimum accuracy of 95\% on test datasets, with precision and recall rates above 90\% for each tumor type (glioma, meningioma, pituitary).
 
@@ -47,16 +47,55 @@ System analysis is about understanding the problem clearly before building the s
     \item \textbf{Operational} \\
           The system aligns effectively with existing healthcare workflows and user requirements. The intuitive web-based interface requires minimal training for medical professionals, supporting multiple user roles including patients, doctors, and administrators. Automated analysis reduces interpretation time while maintaining human oversight through confidence scoring. The system integrates seamlessly with existing radiology workflows and generates comprehensive PDF reports for documentation. Cloud deployment supports telemedicine scenarios, while flexible architecture accommodates both individual practitioners and institutional deployments across various healthcare settings.
     \item \textbf{Economic} \\
-          The project demonstrates favorable cost-benefit ratios through open-source technology utilization, eliminating expensive licensing fees. Development costs remain manageable with estimated ROI within 18-24 months based on subscription models and pay-per-analysis pricing. The system addresses significant market demand for affordable medical imaging tools, particularly in resource-limited settings. Operational costs scale proportionally with adoption, while revenue potential exists through institutional subscriptions and premium features. Long-term sustainability benefits from cloud scaling and automated operations reducing maintenance overhead.
+          The project demonstrates favorable cost-benefit ratios through open-source technology utilization, eliminating expensive licensing fees. Development costs remain manageable with estimated ROI within 18--24 months based on subscription models and pay-per-analysis pricing. The system addresses significant market demand for affordable medical imaging tools, particularly in resource-limited settings. Operational costs scale proportionally with adoption, while revenue potential exists through institutional subscriptions and premium features. Long-term sustainability benefits from cloud scaling and automated operations reducing maintenance overhead.
 
     \item \textbf{Schedule}
           The four-month development timeline from Jestha through Bhadra provides realistic project completion within allocated resources. Modular architecture enables parallel development streams, while agile methodology ensures continuous progress monitoring. The schedule accommodates comprehensive testing phases and risk mitigation strategies with adequate buffer time for unforeseen challenges. Critical milestones include system design completion, core functionality implementation, thorough testing, and final deployment preparation, ensuring successful delivery within the specified timeframe.
-          \begin{figure}[H]
-              \centering
-              \includegraphics[width=1\linewidth]{Images/gantt.png}
-              \caption{Sample Gantt Chart demonstrating schedule feasibility}
-              \label{fig:gantt}
-          \end{figure}
+        %   \begin{figure}[H]
+        %       \centering
+        %       \includegraphics[width=1\linewidth]{Images/gantt.png}
+        %       \caption{Sample Gantt Chart demonstrating schedule feasibility}
+        %       \label{fig:gantt}
+        %   \end{figure}
+
+        \begin{table}[h!]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2pt}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}l*{16}{c}@{}}
+\toprule
+\multirow{2}{*}{\textbf{Task}} &
+\multicolumn{4}{c}{\textbf{Jestha}} &
+\multicolumn{4}{c}{\textbf{Ashar}} &
+\multicolumn{4}{c}{\textbf{Shawarn}} &
+\multicolumn{4}{c}{\textbf{Bhadra}} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(lr){10-13}\cmidrule(lr){14-17}
+ & W1 & W2 & W3 & W4 & W1 & W2 & W3 & W4 & W1 & W2 & W3 & W4 & W1 & W2 & W3 & W4 \\
+\midrule
+Requirement Analysis              & \GantP  & \GantP  &     &     &     &     &     &     &     &     &     &     &     &     &     &     \\
+Planning                          &     & \GantP  & \GantP  &     &     &     &     &     &     &     &     &     &     &     &     &     \\
+Design                            &     &     & \GantP  & \GantP  & \GantP  & \GantP  &     &     &     &     &     &     &     &     &     &     \\
+\addlinespace[2pt]
+Iteration 1 — Dev                 &     &     &     &     & \GantD  & \GantD  & \GantD  &     &     &     &     &     &     &     &     &     \\
+Iteration 1 — Test                &     &     &     &     &     &     &     & \GantT  &     &     &     &     &     &     &     &     \\
+\addlinespace[2pt]
+Iteration 2 — Dev                 &     &     &     &     &     &     &     &     & \GantD  & \GantD  & \GantD  &     &     &     &     &     \\
+Iteration 2 — Test                &     &     &     &     &     &     &     &     &     &     & \GantT  &     &     &     &     &     \\
+\addlinespace[2pt]
+Iteration 3 — Dev                 &     &     &     &     &     &     &     &     &     &     & \GantD  & \GantD  & \GantD  &     &     &     \\
+Iteration 3 — Test                &     &     &     &     &     &     &     &     &     &     &     &     & \GantT  &     &     &     \\
+\addlinespace[2pt]
+Iteration 4 — Dev                 &     &     &     &     &     &     &     &     &     &     &     &     & \GantD  & \GantD  & \GantD  &     \\
+Iteration 4 — Test                &     &     &     &     &     &     &     &     &     &     &     &     &     &     & \GantT  &     \\
+\addlinespace[2pt]
+Deployment                        &     &     &     &     &     &     &     &     &     &     &     &     &     &     & \GantY  & \GantY  \\
+Documentation (ongoing)           & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  & \GantC  \\
+\bottomrule
+\end{tabular}%
+}
+\caption{Gantt-style weekly schedule following iterative development. Shaded cells indicate active work.}
+\end{table}
 \end{enumerate}
 
 \subsubsection{Analysis}
@@ -70,7 +109,7 @@ Diagrams illustrates the workflow and control flow of operations.
           \begin{center}
               \begin{figure}[H]
                   \centering
-                  \includegraphics[width=0.50\linewidth]{Images/Highlevel/class.pdf}
+                  \includegraphics[width=0.4\linewidth]{Images/Highlevel/class.pdf}
                   \caption{Class Diagram}
                   \label{fig:ClassDiagram}
               \end{figure}
@@ -88,7 +127,7 @@ Diagrams illustrates the workflow and control flow of operations.
                   \label{fig:ObjectDiagram}
               \end{figure}
           \end{center}
-          This object diagram illustrates a specific runtime scenario where a user named John has performed brain tumor analyses. The diagram shows concrete instances of the classes, with User object "12345" representing John's account information, connected to two Result objects showing actual analysis outcomes - one detecting a Glioma tumor with 95\% confidence and another showing a Normal scan with 88\% confidence. Both results are linked to the same MLModel instance that has successfully loaded the Keras model file. This snapshot demonstrates how the system maintains relationships between users and their analysis history while sharing the ML model instance across multiple predictions.
+          This object diagram illustrates a specific runtime scenario where a user named John has performed brain tumor analyses. The diagram shows concrete instances of the classes, with User object ``12345'' representing John's account information, connected to two Result objects showing actual analysis outcomes -- one detecting a Glioma tumor with 95\% confidence and another showing a Normal scan with 88\% confidence. Both results are linked to the same MLModel instance that has successfully loaded the Keras model file. This snapshot demonstrates how the system maintains relationships between users and their analysis history while sharing the ML model instance across multiple predictions.
 
           \newpage
     \item \textbf{State Diagram}
